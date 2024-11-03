@@ -8,6 +8,10 @@ class TextType(Enum):
     LINK = "link"
     IMG = "img"
 
+'''
+A "TextNode" is an intermediate representation between Markdown and HTML, and is specific to inline markup.
+'''
+
 class TextNode:
     def __init__(self, text, text_type, url=None):
         self.text = text   
