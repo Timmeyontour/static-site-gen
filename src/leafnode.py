@@ -6,10 +6,8 @@ A LeafNode is a type of HTMLNode that represents a single HTML tag with no child
 
 class LeafNode(htmlnode.HTMLNode):
     def __init__(self, tag, value, props=None):
-        if value is None:
-            raise ValueError("A LeafNode must have a value.")
         
-        super().__init__(tag, value, props)
+        super().__init__(tag, value, None, props)
 
     '''
     LeafNode("p", "This is a paragraph of text.")
@@ -28,4 +26,4 @@ class LeafNode(htmlnode.HTMLNode):
         if self.tag is None:
             return str(self.value)  # Return raw text if no tag is provided.
         
-        return f"<{self.tag}>{self.value}</{self.tag}>"
+        return f"<{self.tag} {self.props_to_html()}>{self.value}</{self.tag}>"
