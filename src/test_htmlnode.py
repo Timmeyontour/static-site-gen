@@ -4,7 +4,7 @@ from htmlnode import HTMLNode
 
 class TestHtmlNode(unittest.TestCase):
     def test_eq(self):
-        print("starting htmlnode tests")
+        print(" ----- starting htmlnode tests ----- ")
         node = HTMLNode(None, None, None, {"href": "https://www.google.com", "target": "_blank"})
         node2 = HTMLNode()
         self.assertNotEqual(node, node2)

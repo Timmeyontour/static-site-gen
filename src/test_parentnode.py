@@ -32,7 +32,8 @@ class TestParentNode(unittest.TestCase):
         print(f"this is the {repr(exception)}")
 
         node4 = ParentNode("p",  [LeafNode("b", "Bold text")], {"href": "https://www.google.com"})
-        print(node4)
+        
+        # test for nested parent nodes
 
 if __name__ == "__main__":
     unittest.main()
